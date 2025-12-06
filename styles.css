@@ -1,0 +1,463 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #11da47, #6c95ff, #ff7272);
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* 页面内容从上到下排列 */
+    justify-content: space-between; /* 自动将顶部和底部分隔 */
+    width: 66%;
+}
+
+/* 内容区域 */
+.content {
+    position: relative;
+    height: 100%;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    left: 25%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 标题 */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 描述文字 */
+p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+/* 按钮容器 */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 按钮样式 */
+.content button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.content button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+.title-smarter{
+    position: relative;
+    text-align: center;
+    top: 15px;
+    left: 10%;
+    font-size: 35px;
+}
+.starter{
+    position: relative;
+    left: 15%;
+    top: 16cap;
+}
+
+/* 图片和文字布局 */
+.starter h3{
+    position: relative;
+    left: 5cap;
+    font-size: 25px;
+}
+
+.hmcl, .pcl, .official, .atl{
+    display: flex;
+    align-items: center; /* 图片和文字垂直居中 */
+    justify-content: flex-start; /* 图片和文字水平对齐 */
+    gap: 20px; /* 图片和文字间距 */
+    padding: 20px;
+}
+
+.starter img {
+    position: relative;
+    width: 60%; /* 控制图片宽度 */
+    height: auto; /* 保持宽高比 */
+    border-radius: 8px; /* 可选：让图片边角圆滑 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 图片的阴影效果 */
+    left: 5cap;
+}
+
+.starter p {
+    position: relative;
+    left: 6cap;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px; /* 移除默认段落间距 */
+}
+
+
+/* 底部固定文字 */
+.email, .talk {
+    position: relative;
+    left: 25%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.email {right: 5px}
+
+#suggests{
+    position: relative;
+    top: 16cap;
+    left: 20%;
+}
+
+#suggests input {
+    position: relative;
+    top: 3cap;
+    left: 15%;
+    width: 82%;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 20px;
+    border-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.other-button {
+    position: relative;
+    top: 1cap;
+    color: #ffffff;
+    background: rgba(150, 255, 171, 0.2);
+    width: 120px;
+    height: 60px;
+    left: 1cap;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.other-button:hover {
+    border-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#suggests button {left:50%;}
+
+#weather-result{
+    position: relative;
+    text-align: center;
+}
+
+#search_box-cfm{
+    position: relative;
+    top: 8cap;
+    left: 50%;
+}
+
+.sr{
+    position: relative;
+    text-align: center;
+}
+
+#sr_background {
+    position: relative;
+    top: 20cap;
+    left: 25%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#result_cfm {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.mod-result {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 搜索表单整体 */
+#search_box-cfm {
+    position: relative;
+    top: 8cap;
+    left: 25%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* 搜索表单标题 */
+#search_box-cfm h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* 输入框 */
+#search_cfm {
+    width: 90%;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+#search_cfm::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* 下拉框容器 */
+#search_box-cfm label {
+    display: inline-block;
+    margin: 8px 10px 5px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+#search_box-cfm select {
+    padding: 8px 12px;
+    margin: 5px 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search_box-cfm select:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* 搜索按钮 */
+#search_box-cfm button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: rgba(150, 255, 171, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#search_box-cfm button:hover {
+    background: rgba(150, 255, 171, 0.4);
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+/* 修复 select 下拉选项颜色 */
+#search_box-cfm select option {
+    background: #2d2d2d;   /* 深色背景 */
+    color: #fff;           /* 白色文字 */
+}
+
+/* 搜索表单的每一行布局：label + select 对齐 */
+#search_box-cfm .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px; /* label 和 select 间距 */
+}
+
+#search_box-cfm label {
+    margin: 0;
+    font-size: 16px;
+    min-width: 60px;  /* 保证宽度一致 */
+    text-align: right;
+}
+
+#search_box-cfm select {
+    flex: 1; /* 自动撑开 */
+    max-width: 200px;
+}
+
+.mod-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.mod-result:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.mod-result img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.mod-content {
+    flex: 1;
+}
+
+.mod-content h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+.mod-content h3 a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+.mod-content h3 a:hover {
+    text-decoration: underline;
+}
+
+.mod-summary {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.mod-meta {
+    font-size: 12px;
+    color: #888;
+}
+
+#toggle-theme{
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    position: absolute;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 15px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    left: 10px;
+    top: 10px;
+    opacity:0.5;
+}
+
+#toggle-theme:hover {
+    opacity: 1;
+}
+
+/* 🌙 暗黑模式（深色 + 红紫渐变风格） */
+body.dark-mode {
+    background: linear-gradient(135deg, #2e385e, #103e3e, #6c3c59);
+    color: #ffffff;
+}
+
+body.dark-mode .content,
+body.dark-mode #sr_background,
+body.dark-mode #search_box-cfm {
+    background: rgba(3, 67, 60, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+body.dark-mode p,
+body.dark-mode .mod-summary,
+body.dark-mode .mod-meta {
+    color: #ddd;
+}
+
+body.dark-mode .content button,
+body.dark-mode #search_box-cfm button,
+body.dark-mode .other-button {
+    background: rgba(50, 87, 180, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f5f5f5;
+}
+body.dark-mode .content button:hover,
+body.dark-mode #search_box-cfm button:hover,
+body.dark-mode .other-button:hover {
+    background: rgba(70, 107, 200, 0.35);
+    border-color: #fff;
+}
+
+body.dark-mode #search_cfm {
+    background: rgba(80, 50, 50, 0.25);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+body.dark-mode #search_cfm::placeholder {
+    color: rgba(200, 213, 255, 0.6);
+}
+
+body.dark-mode #search_box-cfm select {
+    background: rgba(40, 52, 100, 0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+body.dark-mode #search_box-cfm select option {
+    background: #1a1d3a;
+    color: #fff;
+}
+
+body.dark-mode .mod-result {
+    background: #1a1d2a;
+    border: 1px solid #222655;
+}
+body.dark-mode .mod-content h3 a {
+    color: #778eff;
+}
+body.dark-mode .mod-content h3 a:hover {
+    color: #99aaff;
+}
+

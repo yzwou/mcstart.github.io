@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MC Start</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<button id="toggle-theme">深色</button>
+
+<body>
+<div class="content">
+	<h1>下载Minecraft并启动（网站施工中，反正没人看）</h1>
+	<br>
+	<p style="font-size: 20px">以下均为Windows版本启动器</p>
+	<div class="buttons">
+		<button class="button" data-url="https://hmcl.huangyuhui.net/download/" data-message="建议选择开发版下载">hmcl启动器</button>
+<!--		<button class="button" data-message="PCL(1代，建议用PCL2)启动器">PCL(1代，建议用PCL2)启动器</button>-->
+		<button class="button" data-url="https://ltcat.lanzouv.com/b0aj6gsid">PCL2启动器</button>
+        <button class="button" data-url="https://gitee.com/pcl-community/PCL2-CE/releases">PCL CE（PCL社区版）</button>
+		<button class="button" data-url="https://download.nodecdn.net/containers/atl/app/dist/windows/ATLauncher-setup-1.2.0.0.exe">ALauncher启动器</button>
+		<button class="button" data-url="https://aka.ms/minecraftClientGameCoreWindows">Minecraft官方启动器</button>
+	</div><br>
+	<p style="font-size: 20px">下载模组（整合包）</p>
+	<div class="buttons">
+		<button id="cfm" onclick="redirectTo('https://www.curseforge.com/minecraft/search?class=mc-mods')">Curseforge模组下载</button>
+		<button id="cfp" onclick="redirectTo('https://www.curseforge.com/minecraft/search?page=1&pageSize=20&sortBy=relevancy&class=modpacks')">Curseforge整合包下载</button>
+		<button id="mrm" onclick="redirectTo('https://modrinth.com/mods')">Modrinth模组下载</button>
+		<button id="mrp" onclick="redirectTo('https://modrinth.com/modpacks')">Modrinth整合包下载</button>
+		<button id="bsm" onclick="redirectTo('https://bbsmc.net/mods')">BBSMC模组下载</button>
+		<button id="bsp" onclick="redirectTo('https://bbsmc.net/modpacks')">BBSMC整合包下载</button>
+		<button id="bkm" onclick="redirectTo('https://www.mcmod.cn/modlist.html')">MC百科 Mod检索</button>
+		<button id="bkp" onclick="redirectTo('https://www.mcmod.cn/modpack.html')">MC百科 整合包检索</button>
+	</div><br>
+
+	<p style="font-size: 20px">下载光影</p>
+	<div class="buttons">
+		<button id="cfs" onclick="redirectTo('https://www.curseforge.com/minecraft/search?class=shaders')">Curseforge光影下载</button>
+		<button id="mrs" onclick="redirectTo('https://modrinth.com/shaders')">Modrinth光影下载</button>
+		<button id="bbs" onclick="redirectTo('https://bbsmc.net/shaders')">BBSMC光影下载</button>
+	</div><br>
+    <p style="font-size: 20px">联机</p>
+    <div class="buttons">
+        <button class="button" data-url="https://www.radmin-lan.cn/">Radmin Lan 蓝盾</button>
+        <button class="button" data-url="https://www.natfrp.com/?page=panel&module=download" data-message="该功能需要成年实名认证">樱花穿透</button>
+        <button class="button" data-url="https://wwre.lanzouq.com/im3Cl2jbj5vi" data-message="HMCL与PCL CE已内置该功能">Terracotta陶瓦联机</button>
+        <button class="button" data-url="https://ipv6ready.me/index.html.zh_CN" data-message="联机成员均有IPv6时，可在连接填写ip时直接使用IPv6进行联机">IPv6连接测试</button>
+    </div><br>
+	<p style="font-size: 20px">其他</p>
+	<div class="buttons">
+		<button id="bk" onclick="redirectTo('https://www.mcmod.cn/')">MC百科</button>
+		<button id="java" onclick="redirectTo('https://mirrors.tuna.tsinghua.edu.cn/Adoptium/')">Java下载（清华源）</button>
+		<button id="b_mrs" onclick="redirectTo('https://klpbbs.com/')">苦力怕论坛</button>
+		<button id="b_wiki" onclick="redirectTo('https://zh.minecraft.wiki/')">中文 Minecraft Wiki</button>
+        <button id="u_hosts" onclick="redirectTo('https://www.dogfight360.com/blog/18627/')">多平台hosts修改工具</button>
+		<button id="ys" onclick="redirectTo('https://s.team/')">Steam</button>
+	</div>
+</div>
+
+<div style="position: relative;top: 50px;left: 15%;">
+	<h1 class="title-smarter" style="bottom: 10cap">快速搜索Mod（开发中）</h1>
+</div>
+
+<form id="search_box-cfm">
+	<h2 style="margin-bottom: 10px;">快速搜索</h2>
+	<label for="search_cfm">关键词：</label>
+	<input id="search_cfm" maxlength="500" name="message" placeholder="输入名称或关键字">
+	<br><br>
+	<div class="form-row">
+		<label for="category">类型：</label>
+		<select id="category">
+			<option value="all">全部</option>
+			<option value="mod">模组 (Mods)</option>
+			<option value="shader">光影 (Shaders)</option>
+			<option value="resourcepack">资源包 (Resource Packs)</option>
+		</select>
+	</div>
+	<div class="form-row">
+		<label for="version">版本：</label>
+		<select id="version">
+			<option value="">不限</option>
+		</select>
+	</div>
+	<div class="form-row">
+		<label for="loader">加载器：</label>
+		<select id="loader">
+			<option value="">不限</option>
+			<option value="fabric">Fabric</option>
+			<option value="forge">Forge</option>
+			<option value="quilt">Quilt</option>
+			<option value="neoforge">NeoForge</option>
+		</select>
+	</div>
+	<div class="form-row">
+		<label for="source">下载源：</label>
+		<select id="source">
+			<option value="all">全部</option>
+			<option value="curseforge">CurseForge</option>
+			<option value="modrinth">Modrinth</option>
+		</select>
+	</div>
+
+	<div>
+		<button type="button" class="other-button" id="search_button">提交</button>
+	</div>
+</form>
+
+
+<div id="sr_background">
+	<a id="s_result" class="sr"></a>
+	<div id="result_cfm"></div>
+	<hr>
+	<div id="result_mrm"></div>
+</div>
+
+<br><br><br><br><br><br>
+
+<div class="starter">
+	<h2 class="title-smarter">启动器介绍</h2>
+	<br><br>
+	<h3>· HMCL启动器</h3>
+	<div class="hmcl">
+		<img src="hmcl.png" alt="hmcl启动器图片">
+		<div>
+			<p>特点：</p>
+			<p>1.用的是国内源且下载源多，pcl下不了的hmcl可以下</p>
+			<p>2.可以直接导出整合包</p>
+			<p>3.有Mac与Linux版本</p>
+			<p>4.不知道了</p>
+			<!--			<p style="font-size: 17px;left: 10cap;">据说有些光影不适配？（网上部分说法，个人暂无遇到）</p>-->
+		</div>
+	</div>
+
+	<br><br>
+	<h3>· PCL2启动器</h3>
+	<div class="pcl">
+		<img src="pcl.png" alt="pcl启动器图片">
+		<div>
+			<p>特点：</p>
+			<p>1.有用国内源，但hmcl的更稳定</p>
+			<p>2.百宝箱中可以进行内存优化、清理垃圾，特别是那个千万别点</p>
+			<p>3.自带多线程下载器</p>
+			<p>4.帮助界面很有帮助，教程很详细</p>
+			<p>5.不知道了</p>
+		</div>
+	</div>
+
+	<br><br>
+	<h3>· 官方启动器</h3>
+	<div class="official">
+		<img src="official.png" alt="官方启动器图片">
+		<div>
+			<p>特点：</p>
+			<p>1.可以启动基岩版、地下城等非Java版本</p>
+			<p>2.不知道了</p>
+			<br>
+			<p>缺点：</p>
+			<p>安装模组、整合包等东西不方便，且使用的不是国内源</p>
+			<p>不建议作为Java版启动器使用</p>
+		</div>
+	</div>
+
+	<br><br>
+	<h3>· ATLauncher</h3>
+	<div class="atl">
+		<img src="atl.png" alt="ATLauncher启动器图片">
+		<div>
+			<p>特点：</p>
+			<p>1.相比PCL2和hmcl看起来更正规一些（不知道正规来形容恰不恰当）</p>
+			<p>2.功能更丰富，但不一定用得上</p>
+			<p>3.可以导出整合包，个人认为比hmcl的导出功能好一些</p>
+			<p>4.个人认为启动Servers版更加方便，但不一定用得上</p>
+			<br>
+			<p>缺点：</p>
+			<p>使用的不是国内源而是国外源，安装版本时可能较慢或失败</p>
+			<p>需要手动汉化</p>
+		</div>
+	</div>
+
+	<br><br>
+	<h3>· IDEA启动器</h3>
+	<div>
+		<p>特点：</p>
+		<p>可以制作模组，调式方便</p>
+		<br>
+		<p>缺点：</p>
+		<p>其他都是缺点</p>
+		<br>
+		<p style="font-size: 10px; left: 20cap">你还真想用这个？</p>
+	</div>
+	<br><br><br><br>
+
+</div>
+
+<!--<br>-->
+<!--<form id="suggests">-->
+<!--	<h1 class="title-smarter" style="left:5%">建议反馈</h1>-->
+<!--	<label for="message"></label><input id="message" maxlength="500" name="message">-->
+<!--	<div>-->
+<!--		<button type="submit" class="other-button">提交</button>-->
+<!--	</div>-->
+<!--</form>-->
+
+
+<!-- 底部固定文字 -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p class="email">联系方式：yzwou@foxmail.com</p>
+<p class="talk">本网站仅供学习和交流使用</p>
+
+</body>
+<script src="script.js"></script>
+<script src="send.js"></script>
+<script src="search.js"></script>
+<script src="byme.js"></script>
+</html>
